@@ -4,7 +4,6 @@ package math_class;
  * https://docs.oracle.com/en/java/javase/19/docs/api/java.base/java/lang/Math.html
  */
 
-import java.math.MathContext;
 import java.util.Random;
 
 public class Main {
@@ -17,53 +16,50 @@ public class Main {
         // ClassName.methodName(); e.g. Math.random()
         // ClassName.staticVariableName(); e.g. Math.PI
 
-        double myPI = Math.PI;
-
+        //double myPI = Math.round(Math.PI,2);
+/*
         // abs
-        int num1 = -2;
-        int absValue = Math.abs(num1);
-        System.out.println(absValue);
+        int num1 = Math.abs(-2);
+        System.out.println(num1);
 
         // pow
         double num2 = Math.pow(3,5);
-        System.out.println(num2); //cast to int if you want that
+        System.out.println(num2);
 
         // sqrt
-        double num3 = Math.sqrt(80);
+        double num3 = Math.sqrt(36);
         System.out.println(num3);
-        System.out.println(Math.pow(num3,2)); //round off error
 
         //create a random number in the range [0,1)
         double random1 = Math.random();
         System.out.println(random1);
 
-        //create a random integer in the range [0, n)
-        // example: [0,6)
-        double random2 = (int)(Math.random()*6);
-        // in general, multiply by n
+        // create a random number in the range [0,n)
+        double random2 = Math.random() * 20+1; // 20 sided dice from 0-19
+        System.out.println((int)random2);
 
-        // create a random  in the range [0,n]
-        // example [0,6]
-        double random3 = (int)(Math.random()*7);
+        // create a random number in the range [0,n]
+        double random3 = Math.random() * 21; //*21 instead of *20+1
+        System.out.println((int)random3);
+ */
+        //For Homework
 
+        //for all of these I'm making m=6 and n=15
+        int m = 6;
+        int n = 15;
+        // 2) create a random negative int in the range [m,n]
+        int random4 = (int)(Math.random() * 10) + 6;
+        System.out.println(random4);
+        // 2) create a random negative int in the range [-m,0]
+        int random5 = (int)(Math.random() * 7) - 6;
+        System.out.println(random5);
+        // 3) create a random negative int in the range [-m,-n]
+        int random6 = (int)(Math.random() * 10) - 15;
+        System.out.println(random6);
+        // 4) create a random negative int in the range [-m,n)
+        int random7 = (int)(Math.random() * 22) - 6;
+        System.out.println(random7);
 
-        //For Homework (you can make up m and n values)
-
-        // 1) create a random integer in the range [m,n]
-        // (int)(Math.random()*(n-m+1)+m)
-
-        // 2) create a random negative integer in the range [-m,0]
-        // (int)(Math.random()*(-m-1))
-
-        // 3) create a random negative integer in the range [-m,-n]
-
-        // 4) create a random negative integer in the range [-m,n]
-
-
-
-
-
-        // Save for Thursday
 
         //using the Random Class
         //This is not static so we have to create a Random object
@@ -80,11 +76,10 @@ public class Main {
         System.out.println(randIntSmaller);
 
         // get double
-        double randDouble = randObj.nextDouble(); //between 0 and 1
+        double randDouble = randObj.nextDouble();
         System.out.println(randDouble);
 
-        double randDoubleTwo = randObj.nextDouble(50,100);
-        System.out.println(randDoubleTwo); //between 50 and 100, uses RandomGenerator Interface
+        double randDouble2 = randObj.nextDouble()*50+50; //between 50 and 100
 
 
 

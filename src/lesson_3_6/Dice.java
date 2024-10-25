@@ -1,5 +1,7 @@
 package lesson_3_6;
 
+import java.util.Objects;
+
 public class Dice {
     private int value;
 
@@ -15,15 +17,23 @@ public class Dice {
         this.value = value;
     }
 
-
-    public boolean equals(Dice otherDice){
-        return this.value == otherDice.getValue();
-    }
-
     @Override
     public String toString() {
         return "Dice{" +
                 "value=" + value +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Dice dice = (Dice) o;
+        return value == dice.value;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(value);
     }
 }

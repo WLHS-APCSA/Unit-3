@@ -11,6 +11,6 @@ public class Main {
         System.out.println(dice1.equals(dice3));
         System.out.println(dice1 == dice2);
         System.out.println(dice1.equals(dice2));
-    }
 
+    }
 }

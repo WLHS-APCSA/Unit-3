@@ -23,7 +23,7 @@ public class Lesson1 {
         Rectangle rect2 = new Rectangle(1,3);
         Rectangle rect3 = new Rectangle(5,7);
 
-        //does this work? why or why not? If not, fix it
+        //does this work? why or why not? If ------------------------------------not, fix it
         //NO! We need to use .equals() for objects. == compares
         // the references
         boolean oneAndTwo = rect1.equals(rect2);
